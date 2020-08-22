@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import { connect } from 'react-redux';
+import { HashRouter as Router, Route} from 'react-router-dom'
+import Feeling from './../Feeling/Feeling.js'
+
+
+
 
 class App extends Component {
+  componentDidMount() {
+    
+  }
+  //GET will go here
+  
   render() {
     return (
       <Router>
@@ -13,11 +24,11 @@ class App extends Component {
         </header>
 
       <Route exact path="/feeling" component={Feeling}/>
-      <Route exact path="/understanding" component={Understanding}/>
+      {/* <Route exact path="/understanding" component={Understanding}/>
       <Route exact path="/support" component={Support}/>
       <Route exact path="/comments" component={Comments}/>
       <Route exact path="/review" component={Review}/>
-      <Route exact path="/thankyou" component={Thankyou}/>
+      <Route exact path="/thankyou" component={Thankyou}/> */}
         <br/>
       </div>
       </Router>
