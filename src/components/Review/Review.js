@@ -48,16 +48,21 @@ class Review extends Component {
         });
     }
 
+    addInformation = (event) => {
+        this.props.dispatch({type: 'ADD_FEEDBACK', payload: this.state.informationToAdd})
+        this.props.history.push('/review')
+    }
+
     render (){
 
         return(
             <div>
-            <h2>Review Your Feedback</h2>
-            <h4>Feelings:</h4>
-            <h4>Understanding:</h4>
-            <h4>Support:</h4>
-            <h4>Comments:</h4>
-            <button>Submit</button>
+                <div>Review Your Feedback:</div>
+                <div>Feelings:{this.state.feeling}</div>
+                <div>Understanding:{this.state.understanding}</div>
+                <div>Support:{this.state.support}</div>
+                <div>Comments:{this.state.comments}</div>
+                <button onClick={this.addInformation}>Submit</button>
             </div>
             
         );
