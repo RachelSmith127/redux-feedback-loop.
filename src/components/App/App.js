@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { HashRouter as Router, Route} from 'react-router-dom'
 import Feeling from './../Feeling/Feeling.js'
 import Understanding from './../Understanding/Understanding.js'
+import Support from './../Support/Support.js'
 
 
 
