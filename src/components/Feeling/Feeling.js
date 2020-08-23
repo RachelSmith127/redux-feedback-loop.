@@ -12,13 +12,13 @@ class Feeling extends Component {
         this.props.history.push('/understanding')
     }
     render (){
-
+        console.log (this.state)
         return(
             <div>  
             <h2>How are you feeling today</h2>
             <h4>feeling?</h4>
-            <input type= "number"/>
-            <button type="submit" onSubmit={this.sendFeelings}>Next</button>
+            <input type= "number" onChange ={(event) => this.setState({feeling:event.target.value})} />
+            <button type="submit" onClick={this.sendFeelings}>Next</button>
             </div>
             
         );

@@ -32,7 +32,7 @@ const feedbackReducer = (state = {}, action) => {
             ...state,
             comments: action.payload,
         }
-    }
+    } return state;
 }
 
 

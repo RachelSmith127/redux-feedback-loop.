@@ -17,7 +17,7 @@ class Understanding extends Component {
             <div>
             <h2>How are you understanding the content?</h2>
             <h4>Understanding?</h4>
-            <input type= "number"/>
+            <input type= "number" onChange ={(event) => this.setState({understanding:event.target.value})}/>
             <button>Next</button>
             </div>
             

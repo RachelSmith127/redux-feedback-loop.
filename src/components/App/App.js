@@ -22,7 +22,7 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/feeling">Home</Link></li>
         </ul>
 
       <Route exact path="/feeling" component={Feeling}/>

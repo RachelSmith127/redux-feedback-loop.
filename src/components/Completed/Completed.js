@@ -6,10 +6,12 @@ class Completed extends Component {
     // state = {
     //     comments: ''
     // }
-    // sendCompleted = (event) => {
-    //     this.props.dispatch({ type:'ADD_COMPLETED', payload: this.state.comments })
-    //     this.props.history.push('/')
-    // }
+    sendCompleted = (event) => {
+        this.props.dispatch({ type:'ADD_COMPLETED', payload: this.state.comments })
+        this.props.history.push('/feelings')
+
+        
+    }
     
     render (){
         return(
