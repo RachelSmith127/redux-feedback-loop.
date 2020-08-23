@@ -8,7 +8,7 @@ class Understanding extends Component {
         understanding: 0
     }
     sendUnderstanding = (event) => {
-        this.props.dispatch({ type:'ADD_FEELINGS', payload: this.state.understanding })
+        this.props.dispatch({ type:'ADD_UNDERSTANDING', payload: this.state.understanding })
         this.props.history.push('/support')
     }
     render (){
