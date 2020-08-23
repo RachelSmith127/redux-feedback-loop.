@@ -15,7 +15,7 @@ class Completed extends Component {
     render (){
         return(
             <div>
-            <h2>Feedback!</h2>
+            <h2>Feedback Submitted!</h2>
             <h4>Thank You!</h4>
     
             <button onClick={this.sendCompleted}>Leave New Feedback</button>
