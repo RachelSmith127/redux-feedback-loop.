@@ -32,7 +32,10 @@ const feedbackReducer = (state = {}, action) => {
             ...state,
             comments: action.payload,
         }
-    } return state;
+    } if (action.type === 'ADD_COMPLETED'){
+        return state = {}
+        
+    }   return state
 }
 
 

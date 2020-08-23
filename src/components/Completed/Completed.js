@@ -7,9 +7,8 @@ class Completed extends Component {
     //     comments: ''
     // }
     sendCompleted = (event) => {
-        this.props.dispatch({ type:'ADD_COMPLETED', payload: this.state.comments })
-        this.props.history.push('/feelings')
-
+        this.props.dispatch({ type:'ADD_COMPLETED',})
+        this.props.history.push('/feeling')
         
     }
     
@@ -19,7 +18,7 @@ class Completed extends Component {
             <h2>Feedback!</h2>
             <h4>Thank You!</h4>
     
-            <button type ="submit" onSubmit={this.sendCompleted}>Leave New Feedback</button>
+            <button onClick={this.sendCompleted}>Leave New Feedback</button>
             </div>
             
         );

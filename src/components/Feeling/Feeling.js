@@ -8,9 +8,13 @@ class Feeling extends Component {
     }
 
     sendFeelings = (event) => {
+        if(this.state.feeling !== 0){
         this.props.dispatch({ type:'ADD_FEELINGS', payload: this.state.feeling})
         this.props.history.push('/understanding')
-    }
+        }else{
+            alert('Please choose a number between 1 and 5')
+        }
+    } 
     render (){
         console.log (this.state)
         return(

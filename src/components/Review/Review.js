@@ -7,7 +7,7 @@ class Review extends Component {
    
     sendFeedback = () => {
         console.log('info submitted');
-        axios.post('/feedback', this.props.reduxState.feedbackReducer)
+        axios.post('/api/feedback', this.props.reduxState.feedbackReducer)
             .then(response => {
                 this.props.history.push('/completed');
             }).catch(error => {
