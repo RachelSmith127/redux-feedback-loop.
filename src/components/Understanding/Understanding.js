@@ -3,6 +3,14 @@ import { connect } from 'react-redux';
 
 
 class Understanding extends Component {
+
+    state = {
+        understanding: 0
+    }
+    sendUnderstanding = (event) => {
+        this.props.dispatch({ type:'ADD_FEELINGS', payload: this.state.understanding })
+        this.props.history.push('/support')
+    }
     render (){
 
         return(

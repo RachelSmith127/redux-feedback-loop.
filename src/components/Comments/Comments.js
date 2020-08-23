@@ -5,6 +5,13 @@ import { connect } from 'react-redux';
 class Comments extends Component {
     render (){
 
+        state = {
+            feelings: 0
+        }
+        sendFeelings = (event) => {
+            this.props.dispatch({ type:'ADD_FEELINGS', payload: this.state.feelings })
+            this.props.history.push('/')
+        }
         return(
             <div>
             <h2>Any Comments you want to Leave?</h2>

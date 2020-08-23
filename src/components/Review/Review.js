@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 
 
 class Review extends Component {
-    State = {
-        informationToAdd:{
-            feeling: 0,
-            understanding: 0,
-            Support: 0,
-            Comments: ''
-        }
-    }
+    // State = {
+    //     informationToAdd:{
+    //         feeling: 0,
+    //         understanding: 0,
+    //         Support: 0,
+    //         Comments: ''
+    //     }
+    // }
 
     handleFeelingChange = (event) => {
         this.setState({

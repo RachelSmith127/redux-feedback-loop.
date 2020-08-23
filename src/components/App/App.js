@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Route} from 'react-router-dom'
+import { HashRouter as Router, Route, Link} from 'react-router-dom'
 import Feeling from './../Feeling/Feeling.js'
 import Understanding from './../Understanding/Understanding.js'
 import Support from './../Support/Support.js'
@@ -10,11 +10,8 @@ import Comments from './../Comments/Comments.js'
 import Review from './../Review/Review.js'
 
 class App extends Component {
-  componentDidMount() {
-    
-  }
-  //GET will go here
-
+  
+ 
   render() {
     return (
       <Router>
@@ -23,13 +20,16 @@ class App extends Component {
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
         </header>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+        </ul>
 
       <Route exact path="/feeling" component={Feeling}/>
-      <Route exact path="/understanding" component={Understanding}/>
-      <Route exact path="/support" component={Support}/>
-      <Route exact path="/comments" component={Comments}/>
-      <Route exact path="/review" component={Review}/>
-      {/* <Route exact path="/thankyou" component={Thankyou}/> */}
+      <Route path="/understanding" component={Understanding}/>
+      <Route path="/support" component={Support}/>
+      <Route path="/comments" component={Comments}/>
+      <Route path="/review" component={Review}/>
+      {/* <Route exact path="/completed" component={Completed}/> */}
         <br/>
       </div>
       </Router>
@@ -37,10 +37,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (reduxState) => {
-  return{ 
-    reduxState
-  }
-}
-
-export default connect(mapStateToProps)(App);
+export default App;

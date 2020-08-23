@@ -3,14 +3,22 @@ import { connect } from 'react-redux';
 
 
 class Feeling extends Component {
+    state = {
+        feeling: 0
+    }
+
+    sendFeelings = (event) => {
+        this.props.dispatch({ type:'ADD_FEELINGS', payload: this.state.feeling})
+        this.props.history.push('/understanding')
+    }
     render (){
 
         return(
-            <div>
+            <div>  
             <h2>How are you feeling today</h2>
             <h4>feeling?</h4>
             <input type= "number"/>
-            <button>Next</button>
+            <button type ="submit" onSubmit={this.sendFeelings}>Next</button>
             </div>
             
         );
