@@ -16,8 +16,8 @@ class Comments extends Component {
             <div>
             <h2>Any Comments you want to Leave?</h2>
             <h4>Comments</h4>
-            <input type= "text"/>
-            <button type ="submit" onSubmit={this.sendComments}>Next</button>
+            <input type= "text" onChange ={(event) => this.setState({comments:event.target.value})} />
+            <button type="submit" onClick={this.sendComments}>Next</button>
             </div>
             
         );

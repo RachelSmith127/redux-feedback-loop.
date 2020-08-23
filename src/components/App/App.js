@@ -30,7 +30,7 @@ class App extends Component {
       <Route path="/support" component={Support}/>
       <Route path="/comments" component={Comments}/>
       <Route path="/review" component={Review}/>
-      <Route exact path="/completed" component={Completed}/>
+      <Route path="/completed" component={Completed}/>
         <br/>
       </div>
       </Router>
