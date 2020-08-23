@@ -6,9 +6,9 @@ class Support extends Component {
     state = {
         support: 0
     }
-    sendUnderstanding = (event) => {
-        this.props.dispatch({ type:'ADD_FEELINGS', payload: this.state.understanding })
-        this.props.history.push('/support')
+    sendSupport = (event) => {
+        this.props.dispatch({ type:'ADD_SUPPORT', payload: this.state.support })
+        this.props.history.push('/comments')
     }
     render (){
        
@@ -17,7 +17,7 @@ class Support extends Component {
             <h2>How well are you being supported?</h2>
             <h4>Support?</h4>
             <input type= "number"/>
-            <button>Next</button>
+            <button type ="submit" onSubmit={this.sendFeelings}>Next</button>
             </div>
             
         );

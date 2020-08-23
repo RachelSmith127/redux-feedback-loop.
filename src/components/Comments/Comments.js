@@ -6,18 +6,18 @@ class Comments extends Component {
     render (){
 
         state = {
-            feelings: 0
+            comments: ''
         }
-        sendFeelings = (event) => {
-            this.props.dispatch({ type:'ADD_FEELINGS', payload: this.state.feelings })
-            this.props.history.push('/')
+        sendComments = (event) => {
+            this.props.dispatch({ type:'ADD_Comments', payload: this.state.comments })
+            this.props.history.push('/review')
         }
         return(
             <div>
             <h2>Any Comments you want to Leave?</h2>
             <h4>Comments</h4>
             <input type= "text"/>
-            <button>Next</button>
+            <button type ="submit" onSubmit={this.sendFeelings}>Next</button>
             </div>
             
         );
