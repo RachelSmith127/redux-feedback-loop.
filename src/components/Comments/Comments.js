@@ -3,16 +3,15 @@ import { connect } from 'react-redux';
 
 
 class Comments extends Component {
+    state = {
+        comments: ''
+    }
+    sendComments = (event) => {
+        this.props.dispatch({ type:'ADD_COMMENTS', payload: this.state.comments })
+        this.props.history.push('/review')
+    }
+    
     render (){
-
-        state = {
-            comments: ''
-        }
-
-        sendComments = (event) => {
-            this.props.dispatch({ type:'ADD_COMMENTS', payload: this.state.comments })
-            this.props.history.push('/review')
-        }
         return(
             <div>
             <h2>Any Comments you want to Leave?</h2>
