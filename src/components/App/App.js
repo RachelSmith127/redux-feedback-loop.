@@ -21,10 +21,11 @@ class App extends Component {
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
         </header>
+        {/* this is our link */}
         <ul>
           <li><Link to="/feeling">Home</Link></li>
         </ul>
-
+      {/* here are the routes for our different pages */}
       <Route exact path="/feeling" component={Feeling}/>
       <Route path="/understanding" component={Understanding}/>
       <Route path="/support" component={Support}/>

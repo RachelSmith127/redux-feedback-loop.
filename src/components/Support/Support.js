@@ -7,6 +7,8 @@ class Support extends Component {
         support: 0
     }
     sendSupport = (event) => {
+        //if no data is submitted please send an alert, and don't allow the page to advance 
+        //otherwise push the information to history and advance to the next page
         if(this.state.support !== 0){
         this.props.dispatch({ type:'ADD_SUPPORT', payload: this.state.support })
         this.props.history.push('/comments')

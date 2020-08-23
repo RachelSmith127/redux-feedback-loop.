@@ -8,6 +8,8 @@ class Understanding extends Component {
         understanding: 0
     }
     sendUnderstanding = (event) => {
+        //if no data is submitted please send an alert, and don't allow the page to advance 
+        //otherwise push the information to history and advance to the next page
         if(this.state.understanding !== 0) {
         this.props.dispatch({ type:'ADD_UNDERSTANDING', payload: this.state.understanding })
         this.props.history.push('/support')

@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 
 
 class Completed extends Component {
-    // state = {
-    //     comments: ''
-    // }
+   
     sendCompleted = (event) => {
         this.props.dispatch({ type:'ADD_COMPLETED',})
         this.props.history.push('/feeling')
