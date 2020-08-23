@@ -12,13 +12,13 @@ class Understanding extends Component {
         this.props.history.push('/support')
     }
     render (){
-
+        
         return(
             <div>
             <h2>How are you understanding the content?</h2>
             <h4>Understanding?</h4>
             <input type= "number" onChange ={(event) => this.setState({understanding:event.target.value})}/>
-            <button>Next</button>
+            <button type="submit" onClick={this.sendUnderstanding}>Next</button>
             </div>
             
         );
